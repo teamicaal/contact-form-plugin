@@ -30,4 +30,10 @@ There are several options you can customise via. the `wp-config.php` file:
 * Add `define('ICAAL_FROM_ADDRESS', 'YOUR_FROM_ADDRESS');`, replacing the value with the from email address, this will default to `no-reply@icaal.co.uk`
 * Add `define('ICAAL_FROM_NAME', 'YOUR_FROM_NAME');`, replacing the value with the from name in the email header, this will default to the website name
 
+The plugin will automatically load JavaScript which will validate and submit the forms for you.
+
+All you need to do is add `.icaal-contact-form` to the form. The only required field is `<input name="email">`.
+
+You may also specify other required fields by adding a hidden field `<input type="hidden" name="required" value="first_name, last_name">`
+
 == Changelog ==
