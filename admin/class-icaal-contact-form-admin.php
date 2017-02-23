@@ -204,9 +204,9 @@ class Icaal_Contact_Form_Admin {
 			'to'		  => $to,
 			'website' => $website,
 			'ip'			=> $ip,
-			'data'		=> $data
+			'fields'	=> $data
 		);
-		$url = 'https://dashboard.icaal.co.uk';
+		$url = 'https://dashboard.icaal.co.uk/customers/enquiries';
 		$args = array(
 			'headers' => array(
 				'Content-Type' => 'application/json'
