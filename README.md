@@ -35,6 +35,11 @@ You may also specify other required fields by adding a hidden field `<input type
 
 ## Changelog
 
+### 1.0.1
+
+#### Bugfixes
+* **API** - Fix the ICAAL Dashboard API integration
+
 ## Contributors
 
 * [ashdotguru](https://github.com/ashdotguru)
