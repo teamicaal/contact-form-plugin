@@ -38,6 +38,10 @@ You may also specify other required fields by adding a hidden field `<input type
 
 == Changelog ==
 
+= 1.1.0 =
+= Improvements =
+* **API** - The plugin will now automatically post all form data from contact form 7 to the ICAAL Dashboard
+
 = 1.0.1 =
 = Bugfixes =
 * **API** - Fix the ICAAL Dashboard API integration

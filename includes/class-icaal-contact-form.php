@@ -156,6 +156,8 @@ class Icaal_Contact_Form {
 		$this->loader->add_action( 'wp_ajax_icaal_contact_form_submission', $plugin_admin, 'contact_form_submission' );
 		$this->loader->add_action( 'wp_ajax_nopriv_icaal_contact_form_submission', $plugin_admin, 'contact_form_submission' );
 
+		$this->loader->add_action( 'wpcf7_mail_sent', $plugin_admin, 'contact_form_7_sent');
+
 		$this->loader->add_filter( 'wp_mail_content_type', $plugin_admin, 'set_content_type' );
 		$this->loader->add_filter( 'wp_mail_from', $plugin_admin, 'set_mail_from' );
 		$this->loader->add_filter( 'wp_mail_from_name', $plugin_admin, 'set_mail_from_name' );

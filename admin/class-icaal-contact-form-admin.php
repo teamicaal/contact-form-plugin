@@ -180,6 +180,30 @@ class Icaal_Contact_Form_Admin {
 
 	}
 
+	public function contact_form_7_sent( $contact_form ) {
+
+    $submission = WPCF7_Submission::get_instance();
+    $data = $submission->get_posted_data();
+
+    if( array_key_exists('email', $data) ) {
+    	$from = $data['email'];
+    } elseif( array_key_exists('mc4wp-EMAIL', $data) ) {
+    	$from = $data['mc4wp-EMAIL'];
+    } elseif( array_key_exists('your-email', $data) ) {
+    	$from = $data['your-email'];
+    }
+
+    $fields = array();
+    foreach( $data as $key => $value ) {
+    	if( substr($key, 0, 6) != '_wpcf7' ) {
+    		$fields[$key] = $value;
+    	}
+    }
+
+    $this->save_submission( $from, ICAAL_TO_ADDRESS, home_url(), $this->get_ip_address(), $fields );
+
+	}
+
 	private function send_submission( $data ) {
 
 		$to = ICAAL_TO_ADDRESS;
@@ -206,7 +230,7 @@ class Icaal_Contact_Form_Admin {
 			'ip'			=> $ip,
 			'fields'	=> $data
 		);
-		$url = 'https://dashboard.icaal.co.uk/customers/enquiries';
+		$url = 'https://api.icaal.dev/customers/enquiries';
 		$args = array(
 			'headers' => array(
 				'Content-Type' => 'application/json'
@@ -214,7 +238,9 @@ class Icaal_Contact_Form_Admin {
 			'body' => json_encode($params)
 		);
 
-		wp_remote_post( $url, $args );
+		$response = wp_remote_post( $url, $args );
+
+		wp_send_json($response);
 
 		return true;
 
