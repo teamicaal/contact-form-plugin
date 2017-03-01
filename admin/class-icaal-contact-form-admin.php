@@ -230,7 +230,7 @@ class Icaal_Contact_Form_Admin {
 			'ip'			=> $ip,
 			'fields'	=> $data
 		);
-		$url = 'https://api.icaal.dev/customers/enquiries';
+		$url = 'https://api.icaal.co.uk/customers/enquiries';
 		$args = array(
 			'headers' => array(
 				'Content-Type' => 'application/json'
