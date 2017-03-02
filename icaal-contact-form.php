@@ -16,7 +16,7 @@
  * Plugin Name:       ICAAL Contact Form
  * Plugin URI:        https://www.icaal.co.uk/plugins/icaal-contact-form
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.1.0
+ * Version:           1.1.2
  * Author:            ICAAL
  * Author URI:        https://www.icaal.co.uk
  * License:           GPL-2.0+

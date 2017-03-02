@@ -221,28 +221,35 @@ class Icaal_Contact_Form_Admin {
 	}
 
 	private function save_submission( $from, $to, $website, $ip, $data ) {
+	
+		if( defined('ICAAL_API_KEY') ) {
 
-		$params = (object) array(
-			'key' 		=> ICAAL_API_KEY,
-			'from' 	  => $from,
-			'to'		  => $to,
-			'website' => $website,
-			'ip'			=> $ip,
-			'fields'	=> $data
-		);
-		$url = 'https://api.icaal.co.uk/customers/enquiries';
-		$args = array(
-			'headers' => array(
-				'Content-Type' => 'application/json'
-			),
-			'body' => json_encode($params)
-		);
+			$params = (object) array(
+				'key' 		=> ICAAL_API_KEY,
+				'from' 	  => $from,
+				'to'		  => $to,
+				'website' => $website,
+				'ip'			=> $ip,
+				'fields'	=> $data
+			);
+			$url = 'https://api.icaal.co.uk/customers/enquiries';
+			if( WP_DEBUG === true ) {
+				$url = 'http://api.icaal.dev/customers/enquiries';
+			}
+			$args = array(
+				'headers' => array(
+					'Content-Type' => 'application/json'
+				),
+				'body' => json_encode($params)
+			);
 
-		$response = wp_remote_post( $url, $args );
+			$response = wp_remote_post( $url, $args );
 
-		wp_send_json($response);
+			return true;
 
-		return true;
+		}
+
+		return false;
 
 	}
 
