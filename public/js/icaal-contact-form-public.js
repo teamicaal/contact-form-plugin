@@ -20,11 +20,20 @@
 			$submit.prop('disabled', false);
 			if( response.error ) {
 				$response.addAlert('danger', response.error);
+        if( typeof icaal_contact_form_failure == 'function' ) {
+          icaal_contact_form_failure(response.error);
+        }
 			} else if( response.errors ) {
 				$response.addAlert('danger', 'Validation errors occurred:', response.errors);
+        if( typeof icaal_contact_form_failure == 'function' ) {
+          icaal_contact_form_failure(response.errors);
+        }
 			} else {
 				$response.addAlert('success', 'Your enquiry has been successfully sent');
 				$form.trigger('reset');
+        if( typeof icaal_contact_form_success == 'function' ) {
+          icaal_contact_form_success();
+        }
 			}
 		});
 

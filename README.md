@@ -35,6 +35,11 @@ You may also specify other required fields by adding a hidden field `<input type
 
 ## Changelog
 
+### 1.2.0
+
+#### Improvements
+* **JS** - There are now two callback functions you can use to do something on success or failure: `icaal_contact_form_success()`, `icaal_contact_form_failure(errors)`
+
 ### 1.1.2
 
 #### Bugfixes
