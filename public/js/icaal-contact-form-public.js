@@ -23,6 +23,12 @@
         if( typeof icaal_contact_form_failure == 'function' ) {
           icaal_contact_form_failure(response.error);
         }
+        if( typeof ga == 'function' ) {
+          ga('send', 'event', 'Enquiry', 'submit');
+        }
+        if( typeof __gaTracker == 'function' ) {
+          __gaTracker('send', 'event', 'Enquiry', 'submit');
+        }
 			} else if( response.errors ) {
 				$response.addAlert('danger', 'Validation errors occurred:', response.errors);
         if( typeof icaal_contact_form_failure == 'function' ) {

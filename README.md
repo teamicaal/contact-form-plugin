@@ -35,6 +35,9 @@ You may also specify other required fields by adding a hidden field `<input type
 
 ## Changelog
 
+### 1.3.0
+* **Google Analytics** - The contact form will now automatically send Google Analytics events with each successful enquiry. The event category is `Enquiry` and the action is `submit`
+
 ### 1.2.0
 
 #### Improvements

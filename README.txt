@@ -3,8 +3,8 @@ Contributors: ashdotguru
 Donate link: https://www.icaal.co.uk
 Tags: contact, form, icaal
 Requires at least: 4.7.0
-Tested up to: 4.7.2
-Stable tag: 1.2.0
+Tested up to: 4.7.3
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ All you need to do is add `.icaal-contact-form` to the form. The only required f
 You may also specify other required fields by adding a hidden field `<input type="hidden" name="required" value="first_name, last_name">`
 
 == Changelog ==
+
+= 1.3.0 =
+= Improvements =
+* **Google Analytics** - The contact form will now automatically send Google Analytics events with each successful enquiry. The event category is `Enquiry` and the action is `submit`
 
 = 1.2.0 =
 = Improvements =
