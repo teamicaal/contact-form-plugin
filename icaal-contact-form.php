@@ -16,7 +16,7 @@
  * Plugin Name:       ICAAL Contact Form
  * Plugin URI:        https://www.icaal.co.uk/plugins/icaal-contact-form
  * Description:       Create simple contact forms, send via. AJAX and post to the ICAAL Dashboard
- * Version:           1.3.0
+ * Version:           1.3.1
  * Author:            ICAAL
  * Author URI:        https://www.icaal.co.uk
  * License:           GPL-2.0+
