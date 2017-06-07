@@ -3,8 +3,8 @@ Contributors: ashdotguru
 Donate link: https://www.icaal.co.uk
 Tags: contact, form, icaal
 Requires at least: 4.7.0
-Tested up to: 4.7.3
-Stable tag: 1.3.1
+Tested up to: 4.7.5
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ All you need to do is add `.icaal-contact-form` to the form. The only required f
 You may also specify other required fields by adding a hidden field `<input type="hidden" name="required" value="first_name, last_name">`
 
 == Changelog ==
+
+= 1.3.2 =
+= Improvements =
+* **To address** - Allow hidden field to specify to address
 
 = 1.3.1 =
 = Bugfixes =
