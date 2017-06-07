@@ -138,6 +138,8 @@ class Icaal_Contact_Form_Admin {
 				foreach( $required_fields as $field ) {
 					if( empty($data[$field]) ) {
 						$errors[$field] = ucwords( str_replace('_', ' ', $field) ) . ' is empty';
+					} elseif( $field == 'phone' && !$this->is_phone($data[$field]) ) {
+						$errors[$field] = 'Phone number is not valid';
 					}
 				}
 			}
@@ -304,6 +306,19 @@ class Icaal_Contact_Form_Admin {
 	    if ($ip >= 4294967040) return false;
 	  }
 	  return true;
+	}
+
+	private function is_phone( $phone ) {
+		$phone = str_replace('+44', '0', $phone);
+		$pattern = "/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/";
+
+		if( preg_match($pattern, $phone) ) {
+			return true;
+		} elseif( in_array(strlen($phone), array(9,10,11)) ) {
+			return true;
+		}
+
+		return false;
 	}
 
 }

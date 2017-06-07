@@ -35,6 +35,10 @@ You may also specify other required fields by adding a hidden field `<input type
 
 ## Changelog
 
+### 1.3.3
+#### Improvements
+* **Phone number** - Automatically validate phone number fields
+
 ### 1.3.2
 #### Improvements
 * **To address** - Allow hidden field to specify to address
