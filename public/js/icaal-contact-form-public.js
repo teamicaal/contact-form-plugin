@@ -74,6 +74,7 @@
       message = items;
     }
 
+		this.html('');
     this.append('<div class="alert alert-' + type + '">' + message + '</div>');
 
   };
